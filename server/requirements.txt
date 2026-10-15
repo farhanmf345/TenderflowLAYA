@@ -1,0 +1,39 @@
+# TenderFlow v4.0 - Backend Dependencies
+# pip install -r requirements.txt
+
+# ─── Web Framework ────────────────────────────────────────────
+fastapi>=0.115.0
+uvicorn[standard]>=0.34.0
+
+# ─── Database ─────────────────────────────────────────────────
+sqlalchemy>=2.0.0
+psycopg2-binary>=2.9.0    # PostgreSQL driver (bundled libpq, no system install needed)
+alembic>=1.13.0           # DB migrations (optional, recommended for prod)
+
+# ─── Task Scheduling ──────────────────────────────────────────
+APScheduler>=3.10.0
+
+# ─── AI / LLM ─────────────────────────────────────────────────
+google-genai>=1.0.0
+
+# Optional: local Laya decision model for the requirement classifier
+# (only needed when REQUIREMENTS_BACKEND=laya). Needs Python 3.10+; downloads ~800 MB on first use.
+laya>=0.4.2
+
+# ─── Vector DB + Embeddings ───────────────────────────────────
+chromadb>=1.5.5
+sentence-transformers>=5.3.0
+
+# ─── HTTP Client ──────────────────────────────────────────────
+httpx>=0.28.0
+PyMuPDF>=1.24.0       # Extract searchable text from linked tender PDFs
+
+# ─── Validation / Config ──────────────────────────────────────
+pydantic>=2.12.5
+pydantic-settings>=2.0.0
+python-dotenv>=1.2.2
+
+# ─── Utilities ────────────────────────────────────────────────
+psutil>=5.9.0
+
+# Note: smtplib is Python stdlib - no install needed.

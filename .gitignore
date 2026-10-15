@@ -1,0 +1,132 @@
+# ============================================================
+#  TenderFlow v4.0 - .gitignore
+# ============================================================
+
+
+# ─── Environment & Secrets ───────────────────────────────────
+# Explicit patterns - avoids accidentally ignoring .env.example
+.env
+.env.local
+.env.development
+.env.production
+.env.staging
+.env.test
+# .env.example is intentionally NOT listed here - keep it tracked
+
+
+# ─── Python ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.Python
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+wheels/
+
+# Testing & coverage
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+*.log
+
+# MyPy / type checkers
+.mypy_cache/
+.dmypy.json
+.pyright/
+
+# Ruff / Flake8
+.ruff_cache/
+
+
+# ─── FastAPI / Uvicorn ───────────────────────────────────────
+*.pid
+
+
+# ─── Alembic ─────────────────────────────────────────────────
+# Keep migrations tracked; ignore only local override files
+alembic.ini.local
+
+
+# ─── ChromaDB (Vector Store) ─────────────────────────────────
+chroma_data/
+*.chroma
+
+
+# ─── Uploads & Generated Files ───────────────────────────────
+uploads/
+exports/
+temp/
+tmp/
+*.pdf
+*.docx
+*.xlsx
+*.csv
+
+
+# ─── Node / Vite / React (client) ────────────────────────────
+# **/ catches node_modules at any depth (root, client/, nested packages)
+**/node_modules/
+client/node_modules/
+client/dist/
+client/.vite/
+dist/
+.vite/
+
+# Lockfiles
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+
+# ─── IDE & Editor ────────────────────────────────────────────
+.vscode/settings.json
+.vscode/launch.json
+.vscode/*.code-workspace
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+
+# ─── OS Generated ────────────────────────────────────────────
+Desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+
+# ─── Logs ────────────────────────────────────────────────────
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+
+# ─── Misc ────────────────────────────────────────────────────
+*.bak
+*.orig
+*.rej
+.cache/
+allan_docs.zip
+/docs/
